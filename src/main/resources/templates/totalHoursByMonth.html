@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Total Hours by Month</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles4.css" />
+</head>
+<body>
+	<header th:replace="navbar :: nav"></header>
+    <div class="container">
+        <div class="header1">
+            <h1>Total Hours for Month</h1>
+        </div>
+        <div class="content">
+            <p><strong>Username:</strong> <span th:text="${username}">Username</span></p>
+            <p><strong>Year:</strong> <span th:text="${year}">Year</span></p>
+            <p><strong>Month:</strong> <span th:text="${month}">Month</span></p>
+            <p><strong>Total Hours:</strong> <span th:text="${totalHours}">Total Hours</span></p>
+        </div>
+    </div>
+</body>
+</html>

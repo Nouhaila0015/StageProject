@@ -19,4 +19,9 @@ public interface IEntryRepo extends JpaRepository<Entry,Long>{
                                           @Param("day") int day, 
                                           @Param("month") int month, 
                                           @Param("year") int year);
+	
+	@Query("SELECT SUM(e.totalHours) FROM Entry e WHERE e.username = :username AND e.month = :month AND e.year = :year AND FUNCTION('DAY', e.entryTime) = FUNCTION('DAY', e.exitTime)")
+    Double sumTotalHoursByUsernameAndMonthAndYear(@Param("username") String username, 
+                                           @Param("month") int month, 
+                                           @Param("year") int year);
 }

@@ -45,4 +45,17 @@ public class EntryController {
         model.addAttribute("totalHours", totalHours);
         return "totalHours";
     }
+	
+	@GetMapping("/total/{username}/{year}/{month}")
+    public String sumTotalHoursByUserAndMonth(@PathVariable("username") String username,
+                                              @PathVariable("year") int year,
+                                              @PathVariable("month") int month,
+                                              Model model) {
+        Double totalHours = serviceEntry.sumTotalHoursByUsernameAndMonthAndYear(username, month, year);
+        model.addAttribute("username", username);
+        model.addAttribute("year", year);
+        model.addAttribute("month", month);
+        model.addAttribute("totalHours", totalHours);
+        return "totalHoursByMonth";
+    }
 }

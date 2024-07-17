@@ -25,4 +25,9 @@ public class ServiceEntryImpl implements IServiceEntry{
 		return entry.sumTotalHoursByUsernameAndDate(username, date.getDayOfMonth(), date.getMonthValue(), date.getYear());
 	}
 
+	@Override
+	public Double sumTotalHoursByUsernameAndMonthAndYear(String username, int month, int year) {
+		return entry.sumTotalHoursByUsernameAndMonthAndYear(username, month, year);
+	}
+
 }
