@@ -7,4 +7,5 @@ import springMVC.dao.entities.Entry;
 
 public interface IServiceEntry {
 	public List<Entry> listeUserParDate(String username, LocalDate date);
+	public Double sumTotalHoursByUsernameAndDate(String username, LocalDate date);
 }

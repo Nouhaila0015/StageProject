@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Total Hours</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles3.css" />
+    
+</head>
+<body>
+	<header th:replace="navbar :: nav"></header>
+    <div class="container">
+        <div class="header1">
+            <h1>Total Hours</h1>
+        </div>
+        <div class="content">
+            <p><strong>Username:</strong> <span th:text="${username}">Username</span></p>
+            <p><strong>Date:</strong> <span th:text="${date}">Date</span></p>
+            <p><strong>Total Hours:</strong> <span th:text="${totalHours}">Total Hours</span></p>
+        </div>
+    </div>
+</body>
+</html>
