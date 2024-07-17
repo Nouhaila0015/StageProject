@@ -19,6 +19,7 @@ body {
     justify-content: center;
     align-items: center;
     height: calc(100vh - 200px); /* Adjusting height to exclude header */
+    width: 60%;
 }
 
 .content {
